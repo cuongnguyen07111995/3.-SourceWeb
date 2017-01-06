@@ -1,0 +1,2 @@
+class DongiaohangsController < ApplicationController
+end

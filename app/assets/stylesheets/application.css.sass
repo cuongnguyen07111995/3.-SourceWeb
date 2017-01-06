@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+header
+  span a
+    color: white
+  span a:hover
+    background-color: #f26d7d
+    color: #23527c
+    text-decoration: none
+  .dropdown-menu li a
+    color: #f26d7d
+    &:hover
+      background-color: #f26d7d
+      color: #23527c
+      text-decoration: none
+  padding-top: 10px
+  width: 100%
+  color: white
+  font-size: 16px
+  background-image: image-url("header.png")
+  background-size: cover
+
+footer
+  background-color: black
+  color: white
+  text-align: center
+  height: 100px
+
+nav
+  text-align: center
+  ul
+    display: inline-block
+
+nav ul li
+  display: block
+  float: left
+  margin-left: 10px
+  color: white
+  a
+    display: block
+    float: left
+    margin-left: 10px
+    color: white
+    text-decoration: none
+    font-size: 20px
+    padding: 0.5em 0.5em 0.5em 0.5em
+    &:hover
+      background-color: #f26d7d
+      text-decoration: none
+
+.nav ul li
+  display: block
+  float: left
+  color: white
+  a
+    display: block
+    float: left
+    color: black
+    text-decoration: none
+    font-size: 15px
+    padding: 0.5em 0.5em 0.5em 0.5em
+    &:hover
+      background-color: #f26d7d
+      text-decoration: none
+
+.btn-foodlover
+  background-color: #f26d7d
+  color: white
+  font-size: 18px
+  padding: 0.3em 0.3em 0.3em 0.3em
+  &:hover
+    background-color: #6df2e2
+    text-decoration: none
+
+.panel-foodlover
+  border-color: #f26d7d
+  padding-bottom: 20px
+
+.img-responsive
+  width: 100%
+  padding-top: 10px
+  
+.food
+  color: white
+  font-size: 70px
+
+.lover
+  color: #f26d7d
+  font-size: 70px
+  font-family: cursive
+
+#tag_line
+  color: #f26d7d
+  font-size: 18px
+  padding-bottom: 100px
+
+#food
+  color: white
+  font-size: 40px
+
+#lover
+  color: #f26d7d
+  font-size: 40px
+  font-family: cursive
+
+.foodlover
+  background-color: #f26d7d
+  display: inline-block
+  padding: 0.5em 0.7em 0.5em 0.7em

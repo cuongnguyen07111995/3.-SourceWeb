@@ -1,0 +1,54 @@
+<!-- Page Content -->
+
+<% @monans.each do |monan| %>
+    <div class="row">
+
+        <div class="col-sm-6 col-md-6 text-center">
+            <!-- Preview Image -->
+            <p>
+                <%= image_tag(monan.anh, class: "img-responsive center-block") if monan.anh? %>
+            </p>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+            <h2>
+                <%= link_to monan.ten, monan_path(monan), class: 'text-foodlover' %><br>
+                <small>
+                    <%= monan.luotxem.to_s + " lượt xem - "%>
+                    <%= monan.luotthich.to_s + " lượt mua"%>
+                </small>
+            </h2>
+
+            <h3>
+                <%= monan.gia %> vnđ
+            </h3>
+
+            <p>
+                <%= monan.mieuta.first(150) + "..." %>
+                <%= link_to 'Xem chi tiết', monan_path(monan), class: 'btn btn-default btn-xs' %>
+            </p>
+
+            <% if current_user == @thanhvien %>
+                <%= link_to 'Sửa', edit_monan_path(monan), class: 'col-xs-4 col-xs-offset-1 btn btn-warning' %>
+                <%= link_to 'Xóa', monan_path(monan), method: :delete, data: { confirm: 'Are you sure?' }, class: 'col-xs-4 col-xs-offset-1 btn btn-danger' %>
+            <% else %>
+                <%= link_to "Đặt món", "#", class: "col-xs-6 col-xs-offset-3 btn btn-lg btn-foodlover" %>
+            <% end %>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+<% end %>
+
+<!-- Pager -->
+<ul class="pager">
+    <li class="previous">
+        <a href="#">&larr; Older</a>
+    </li>
+    <li class="next">
+        <a href="#">Newer &rarr;</a>
+    </li>
+</ul>

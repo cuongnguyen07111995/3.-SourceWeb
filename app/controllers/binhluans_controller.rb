@@ -1,0 +1,2 @@
+class BinhluansController < ApplicationController
+end

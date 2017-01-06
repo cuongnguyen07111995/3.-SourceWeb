@@ -1,0 +1,2 @@
+module DiachisHelper
+end

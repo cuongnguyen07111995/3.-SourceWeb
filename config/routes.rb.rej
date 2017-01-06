@@ -1,0 +1,9 @@
+diff a/3. SourceWeb/config/routes.rb b/3. SourceWeb/config/routes.rb	(rejected hunks)
+@@ -26,6 +26,7 @@
+   get '/lienhe', to: 'welcome#lienhe'
+   get '/gioithieu', to: 'welcome#gioithieu'
+   get '/home', to: "monans#index"
++  get '/thanhvien/show' , to: 'welcome#user'
+ 
+   root "monans#index"
+ end

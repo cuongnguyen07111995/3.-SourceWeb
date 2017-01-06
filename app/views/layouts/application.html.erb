@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Lover</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
+
+    <div id="user-widget">
+    <% if current_user %>
+    Welcome <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <% end %>
+</div>
+    <div class="row col-lg-12">
+      <!-- Left Sidebar -->
+
+      <!-- Content -->
+      <div class="col-md-8 col-md-offset-2", role="main">
+        <div class="row", style="padding-top: 10px">
+          <%= yield %>
+        </row>
+      </div>
+      <!-- Right Sidebar -->
+
+      <footer>
+        <%= render 'layouts/footer' %>
+      </footer>
+    </div>
+  </body>
+</html>

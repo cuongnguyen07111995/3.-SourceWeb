@@ -1,0 +1,51 @@
+// Place all the styles related to the Monans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav {
+  text-align: left;
+}
+
+.portfolio-item{
+    color: #f26d7d;
+}
+
+.portfolio-item a{
+    color: #f26d7d;
+}
+
+.portfolio-item:hover{
+    background-color: #f26d7d;
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-item a:hover{
+    background-color: #f26d7d;
+    color: white;
+    text-decoration: none;
+}
+
+.xemthem {
+  float: right;
+  color: black;
+  padding:0.5em 0.5em 0.5em 0.5em
+}
+
+.xemthem:hover{
+  background-color: #f26d7d;
+  color: #23527c;
+  text-decoration: none;
+}
+
+.xemthem a {
+  float: right;
+  color: black;
+  padding:0.5em 0.5em 0.5em 0.5em
+}
+
+.xemthem a:hover {
+  background-color: #f26d7d;
+  color: #23527c;
+  text-decoration: none;
+}

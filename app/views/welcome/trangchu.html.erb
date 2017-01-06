@@ -1,0 +1,49 @@
+<div class="row">
+	<p class="foodlover"><b>Món HOT</b></p>
+	<%= link_to "Xem thêm", monans_path, class: 'xemthem' %>
+</div>
+
+<!-- Page Content -->
+<div class="row">
+
+	<% @monans.each do |monan| %>
+		
+		<div class="col-xs-6 col-md-4 col-sm-4 portfolio-item text-center">
+			<%= link_to( monan_path(monan) ) do %>
+				<%= image_tag(monan.anh, class: "img-responsive center-block") if monan.anh? %>
+				<b><%= monan.ten.first(20) %></b>...<br>
+				<%= link_to "Đặt món", '#', class: "btn btn-lg btn-foodlover" %>
+			<% end %>
+		</div>
+
+	<% end %>
+
+</div>
+
+<div class="row">
+	<div class="nav" style="display: inline-block;">
+		<ul>
+			<li class="action"><a href="/thucdon/index">Ăn sáng</a></li>
+			<li><a href="/thucdon/index">Ăn trưa</a></li>
+			<li><a href="/thucdon/index">Ăn chiều</a></li>
+			<li><a href="/thucdon/index">Ăn tối</a></li>
+		</ul>
+	</div>
+	<%= link_to "Xem thêm", monans_path, class: 'xemthem' %>
+</div>
+
+<div class="row">
+
+	<% @monans.each do |monan| %>
+		
+		<div class="col-xs-6 col-md-4 col-sm-4 portfolio-item text-center">
+			<%= link_to( monan_path(monan) ) do %>
+				<%= image_tag(monan.anh, class: "img-responsive center-block") if monan.anh? %>
+				<b><%= monan.ten.first(20) %></b>...<br>
+				<%= link_to "Đặt món", '#', class: "btn btn-lg btn-foodlover" %>
+			<% end %>
+		</div>
+
+	<% end %>
+
+</div>

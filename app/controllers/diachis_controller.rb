@@ -1,0 +1,2 @@
+class DiachisController < ApplicationController
+end

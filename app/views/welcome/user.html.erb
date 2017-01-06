@@ -1,0 +1,34 @@
+<span class="help-block"></span>
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8" style="border:1px solid #f26d7d">
+<h3 style="background-color:#f26d7d">Thông tin User:</h3>
+<% @currentusers = Thanhvien.all%>
+<% @currentusers.each  do |f| %>
+<% if f.id == session[:user_id] %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address:</label>
+    <%= f.email %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Name:</label>
+    <%= f.hoten %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Phone Number:</label>
+    <%= f.sdt %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Role:</label>
+    <%= f.role %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ngay Sinh:</label>
+    <%= f.ngaysinh%>
+  </div>
+  <%end %>
+<% end %>
+</div>
+<div class="col-sm-2"></div>
+</div>
+<span class="help-block"></span>

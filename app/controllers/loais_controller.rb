@@ -1,0 +1,2 @@
+class LoaisController < ApplicationController
+end

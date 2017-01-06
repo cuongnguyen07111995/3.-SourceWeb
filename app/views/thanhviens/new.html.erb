@@ -1,0 +1,73 @@
+<div class="col-lg-8 col-lg-offset-2 panel panel-foodlover">
+  
+  <h3 class="foodlover", style="width: 100%;">Đăng ký</h3>
+
+  <%= form_for(@thanhvien) do |f| %>
+    
+    <% if @user != nil %>
+      <% if @user.errors.any? %>
+      <div id="error_explanation" class="alert alert-danger alert-dismissable">
+          <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+          </ul>
+      </div>
+      <% end %>
+    <% end %>
+
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <a href="#" class="btn btn-lg btn-block btn-facebook" >
+          Facebook
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="#" class="btn btn-lg btn-block btn-twitter" >
+          Twitter
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="#" class="btn btn-lg btn-block btn-google" >
+          Google+
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <div class="input-group form-group">
+        <span class="input-group-addon"></span>
+        <%= f.text_field :hoten, class: 'form-control', placeholder: "Nhập họ và tên", required: true %>
+      </div>
+      
+      <div class="input-group form-group">
+        <span class="input-group-addon"></span>
+        <%= f.email_field :email, class: 'form-control', placeholder: "Nhập email", required: true %>
+      </div>
+
+      <div class="input-group form-group">
+        <span class="input-group-addon"></span>
+        <%= f.text_field :sdt, class: 'form-control', placeholder: "Nhập số điện thoại", required: true %>
+      </div>
+      <div class="input-group form-group">
+        <span class="input-group-addon"></span>
+        <%= f.password_field :password, class: "form-control", placeholder: "Nhập mật khẩu", required: true %>
+      </div>
+
+      <div class="input-group form-group">
+        <span class="input-group-addon"></span>
+        <%= f.password_field :confirm_password, class: "form-control", placeholder: "Nhập lại mật khẩu", required: true %>
+      </div>
+    </div>
+    
+    <%= f.submit "Đăng ký", class: "btn btn-foodlover form-control"%>
+  
+  <% end %>
+
+</div>
